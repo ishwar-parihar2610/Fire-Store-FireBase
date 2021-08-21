@@ -132,12 +132,12 @@ public class MainActivity extends AppCompatActivity {
                 String data="";
             for (QueryDocumentSnapshot documentSnapshots:queryDocumentSnapshots){
                 Note note=documentSnapshots.toObject(Note.class);
-                note.setDocumentId(documentSnapshots.getId());
+                note.setId(documentSnapshots.getId());
 
-                String documentId=note.getDocumentId();
+                String documentId=note.getId();
                 String Gmail=note.getGmail();
-                String username=note.getUserName();
-                String passWord=note.getPassWord();
+                String username=note.getName();
+                String passWord=note.getPassword();
                 int priority=note.getPriority();
                 data+="Id: "+documentId +"\nGmail is: "+Gmail+"\nUsername is: "+username+"\nPassword is: "+passWord+"\nPriority is: "+ priority + "\n"+"\n";
 

@@ -2,16 +2,14 @@ package com.example.firestore.Note;
 
 public class Note {
 
-
-
     private String id;
-    private String username;
+    private String name;
     private String Gmail;
     private String password;
     private int priority;
 
-    public Note(String username, String Gmail, String password,int priority) {
-        this.username = username;
+    public Note(String name, String Gmail, String password,int priority) {
+        this.name = name;
         this.Gmail = Gmail;
         this.password = password;
         this.priority=priority;
@@ -20,12 +18,20 @@ public class Note {
     public Note() {
     }
 
-    public String getUserName() {
-        return username;
+    public String getId() {
+        return id;
     }
 
-    public void setUserName(String username) {
-        this.username = username;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getGmail() {
@@ -36,20 +42,14 @@ public class Note {
         Gmail = gmail;
     }
 
-    public String getPassWord() {
+    public String getPassword() {
         return password;
     }
-    public String getDocumentId() {
-        return id;
-    }
 
-    public void setDocumentId(String id) {
-        this.id = id;
-    }
-
-    public void setPassWord(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
+
     public int getPriority() {
         return priority;
     }
@@ -57,4 +57,8 @@ public class Note {
     public void setPriority(int priority) {
         this.priority = priority;
     }
+
+
+
+
 }
